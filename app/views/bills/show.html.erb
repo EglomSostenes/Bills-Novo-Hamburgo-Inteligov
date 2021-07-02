@@ -1,0 +1,14 @@
+<div class="text-left"><h4>Bill - <%= @bill.name %></h4></div>
+
+<div class="callout callout-primary">
+    <div class="p-2"><strong>Abstract: </strong><%=@bill.abstract%></div>
+</div>
+
+<div class="callout callout-primary">
+    <div class="p-2"><strong>Status: </strong><%=@bill.status%></div>
+</div>
+
+<div class="callout callout-primary">
+    <div class="p-2"> <a href=<%= @bill.link %> target="_blank">Visit for more details</a> - <%= link_to "All Bills", bills_path %></div>
+</div>
+

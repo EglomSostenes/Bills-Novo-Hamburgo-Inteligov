@@ -1,0 +1,37 @@
+<h1> Bills </h1>
+
+<p id="notice"><%= notice %></p>
+<p id="alert"><%= alert %></p>
+
+<div class="form-inline pt-4 mb-2 float-right">
+    <%= search_form_for @q do |f| %>
+
+        <%= f.search_field :abstract_cont, class: "form-control mr-sm-2", title: "Abstract of Bill" %>
+        <%= f.submit "Text search", class: "btn btn-primary my-2 my-sm-0"%>
+
+    <% end %>
+</div>
+
+<table class="table table-striped">
+  <thead>
+      <tr>
+        <td><strong>Name</strong></td> 
+        <td><strong>Link</strong></td>
+      </tr>
+  </thead>
+  <tbody>
+      <% @bills.each do |bill| %>
+          <tr>
+            <td> <%= link_to bill.name, bill %> </td>
+            <td> <%= bill.link %></td>
+          </tr>
+      <% end %>
+  </tbody>
+</table>
+
+<%= link_to '', bills_path(request.parameters.merge({format: 'csv'})), class: "oi oi-data-transfer-download btn btn-primary btn-lg", title: "Export" %> <br> <br>
+
+<%= will_paginate @bills %>
+<%= page_entries_info @bills %>
+
+
