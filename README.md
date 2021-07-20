@@ -1,24 +1,19 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Getting Started (Assuming you have ruby, postgres e yarn installed)
 
-Things you may want to cover:
+1 - clone the project
+2 - run bundle install
+3 - run yarn install
+4 - run rails:db:create and rails db:migrate
+5 - rails s
 
-* Ruby version
+Scrapping the bills
 
-* System dependencies
+There is a task aided by gem whenever that executes the extraction of bills every day,
+but you can run the command on the console "ScrapingService.scrap_bills_novo_hamburgo" 
+so you don't need to configure the cron.
 
-* Configuration
 
-* Database creation
 
-* Database initialization
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
