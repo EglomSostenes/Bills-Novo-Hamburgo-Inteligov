@@ -4,7 +4,7 @@
 
 <h2> First way </h2> </br></br>
 
-<h3> Getting Started (Assuming you have ruby, postgres e yarn installed) <h3> <br> <br>
+<h3> Getting Started (Assuming you have ruby, postgres e yarn installed) </h3> <br> <br>
 
 1 - clone the project  </br>
 2 - run bundle install </br>
